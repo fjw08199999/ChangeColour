@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         alphaLabelValue.text = String(format: "%.2f", alphaSliderValue.value)
     }
     
-    func randomNumber(numberA: CGFloat, numberB: CGFloat) {
+    func randomNumberRange(numberA: CGFloat, numberB: CGFloat) {
 
         redSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
         greenSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
@@ -51,36 +51,30 @@ class ViewController: UIViewController {
         alphaSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
     }
     
-    func displayLabelText() {
+    func displayLabelText(textA: String, textB: String, textC: String, textD: String) {
         
-        redLabel.text = "紅色"
-        greenLabel.text = "綠色"
-        blueLabel.text = "藍色"
-        alphaLabel.text = "透明度"
+        redLabel.text = textA
+        greenLabel.text = textB
+        blueLabel.text = textC
+        alphaLabel.text = textD
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        displayLabelText()
+        displayLabelText(textA: "紅色", textB: "綠色", textC: "藍色", textD: "透明")
         colorLabelValueSet()
     }
 
     @IBAction func changeColorSlider(_ sender: UISlider) {
         
-        _ = String(format: "%.2f", redSliderValue.value)
-        _ = String(format: "%.2f", greenSliderValue.value)
-        _ = String(format: "%.2f",blueSliderValue.value)
-        _ = String(format: "%.2f", alphaSliderValue.value)
-        
         colorLabelValueSet()
         colorSet()
     }
 
-    
     @IBAction func randomButton(_ sender: Any) {
         
-        randomNumber(numberA: 0, numberB: 1)
+        randomNumberRange(numberA: 0, numberB: 1)
         colorLabelValueSet()
         colorSet()
     }

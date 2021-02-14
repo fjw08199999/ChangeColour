@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var alphaLabel: UILabel!
+    
     @IBOutlet weak var redLableValue: UILabel!
     @IBOutlet weak var greenLabelValue: UILabel!
     @IBOutlet weak var blueLabelValue: UILabel!
@@ -36,30 +37,44 @@ class ViewController: UIViewController {
         greenLabel.text = "綠色"
         blueLabel.text = "藍色"
         alphaLabel.text = "透明度"
-        
+        redLableValue.text = String(format: "%.2f", redSliderValue.value)
+        greenLabelValue.text = String(format: "%.2f", greenSliderValue.value)
+        blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
+        alphaLabelValue.text = String(format: "%.2f", alphaSliderValue.value)
     }
 
-    @IBAction func redSlider(_ sender: UISlider) {
+    @IBAction func changeColorSlider(_ sender: UISlider) {
         
-    }
-    
-    @IBAction func greenSlider(_ sender: UISlider) {
+        _ = String(format: "%.2f", redSliderValue.value)
+        redLableValue.text = String(format: "%.2f", redSliderValue.value)
+        _ = String(format: "%.2f", greenSliderValue.value)
+        greenLabelValue.text = String(format: "%.2f", greenSliderValue.value)
+        _ = String(format: "%.2f",blueSliderValue.value)
+        blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
+        _ = String(format: "%.2f", alphaSliderValue.value)
+        alphaLabelValue.text = String(format: "%.2f", alphaSliderValue.value)
         
+        imageView01.backgroundColor = UIColor(red: CGFloat(redSliderValue.value), green: CGFloat(greenSliderValue.value), blue: CGFloat(blueSliderValue.value), alpha: CGFloat(alphaSliderValue.value))
     }
-    
-    @IBAction func blueSlider(_ sender: UISlider) {
-        
-    }
-    
-    @IBAction func alphaSlider(_ sender: UISlider) {
-        
-    }
+
     
     @IBAction func randomButton(_ sender: Any) {
         
+        redSliderValue.value = Float(CGFloat.random(in: 0...1))
+        redLableValue.text = String(format: "%.2f", redSliderValue.value)
+        greenSliderValue.value = Float(CGFloat.random(in: 0...1))
+        greenLabelValue.text = String(format: "%.2f", greenSliderValue.value)
+        blueSliderValue.value = Float(CGFloat.random(in: 0...1))
+        blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
+        alphaSliderValue.value = Float(CGFloat.random(in: 0...1))
+        alphaLabelValue.text = String(format: "%.2f", alphaSliderValue.value)
+        
+        imageView01.backgroundColor = UIColor(red: CGFloat(redSliderValue.value), green: CGFloat(greenSliderValue.value), blue: CGFloat(blueSliderValue.value), alpha: CGFloat(alphaSliderValue.value))
     }
     
     @IBAction func setButton(_ sender: Any) {
+        
+        
         
     }
     

@@ -28,7 +28,7 @@
                                 <rect key="frame" x="63" y="404" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fpf-J3-SI1"/>
+                                    <action selector="changeColorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fpf-J3-SI1"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-IP-gm5">
@@ -91,21 +91,21 @@
                                 <rect key="frame" x="63" y="438" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="8wd-Ez-I2i"/>
+                                    <action selector="changeColorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="NMp-Lb-PpA"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-YD-XWh">
                                 <rect key="frame" x="63" y="478" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="CIq-IZ-xWB"/>
+                                    <action selector="changeColorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="89o-X2-WRk"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-02-Opm">
                                 <rect key="frame" x="63" y="515" width="289" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="7M6-P3-XqR"/>
+                                    <action selector="changeColorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="TGW-XQ-9RA"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exC-6r-A4f">
@@ -134,12 +134,11 @@
                         <outlet property="alphaSliderValue" destination="Wpq-02-Opm" id="2Yl-2Y-62h"/>
                         <outlet property="blueLabel" destination="3pK-W4-Msf" id="PXh-UR-r12"/>
                         <outlet property="blueLabelValue" destination="8P9-m7-ifP" id="Oez-bv-L2o"/>
-                        <outlet property="blueSliderValue" destination="cdc-YD-XWh" id="4qw-v5-BA6"/>
+                        <outlet property="blueSliderValue" destination="cdc-YD-XWh" id="UsN-E0-vjg"/>
                         <outlet property="greenLabel" destination="yDW-Q7-Faq" id="eHj-lX-7En"/>
                         <outlet property="greenLabelValue" destination="ict-YD-CKf" id="OFu-2k-i7Z"/>
                         <outlet property="greenSliderValue" destination="Cht-IA-IHb" id="pgD-pM-oGV"/>
                         <outlet property="imageView01" destination="BfF-KM-v6W" id="o9P-zn-D4H"/>
-                        <outlet property="imageView01Controller" destination="BfF-KM-v6W" id="FHt-Zh-Fqc"/>
                         <outlet property="imageView02" destination="QGB-HG-PvC" id="n8b-Ye-x6K"/>
                         <outlet property="randomButtonText" destination="exC-6r-A4f" id="mro-LB-tEf"/>
                         <outlet property="redLabel" destination="RLx-IP-gm5" id="lmS-QA-2Vv"/>

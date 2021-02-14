@@ -31,24 +31,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var setButtonText: UIButton!
     
     func colorSet() {
+        
         imageView01.backgroundColor = UIColor(red: CGFloat(redSliderValue.value), green: CGFloat(greenSliderValue.value), blue: CGFloat(blueSliderValue.value), alpha: CGFloat(alphaSliderValue.value))
     }
     
     func colorLabelValueSet() {
+        
         redLableValue.text = String(format: "%.2f", redSliderValue.value)
         greenLabelValue.text = String(format: "%.2f", greenSliderValue.value)
         blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
         alphaLabelValue.text = String(format: "%.2f", alphaSliderValue.value)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func randomNumber(numberA: CGFloat, numberB: CGFloat) {
+
+        redSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
+        greenSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
+        blueSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
+        alphaSliderValue.value = Float(CGFloat.random(in: numberA...numberB))
+    }
+    
+    func displayLabelText() {
         
         redLabel.text = "紅色"
         greenLabel.text = "綠色"
         blueLabel.text = "藍色"
         alphaLabel.text = "透明度"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        displayLabelText()
         colorLabelValueSet()
     }
 
@@ -66,11 +80,7 @@ class ViewController: UIViewController {
     
     @IBAction func randomButton(_ sender: Any) {
         
-        redSliderValue.value = Float(CGFloat.random(in: 0...1))
-        greenSliderValue.value = Float(CGFloat.random(in: 0...1))
-        blueSliderValue.value = Float(CGFloat.random(in: 0...1))
-        alphaSliderValue.value = Float(CGFloat.random(in: 0...1))
-       
+        randomNumber(numberA: 0, numberB: 1)
         colorLabelValueSet()
         colorSet()
     }

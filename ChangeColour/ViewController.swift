@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreImage.CIFilterBuiltins
 
 class ViewController: UIViewController {
     
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView02: UIImageView!
     
     @IBOutlet weak var randomButtonText: UIButton!
-    @IBOutlet weak var setButtonText: UIButton!
+    @IBOutlet weak var setButton: UIButton!
+    @IBOutlet weak var picSizeSegmented: UISegmentedControl!
     
     func colorSet() {
         
@@ -59,11 +61,25 @@ class ViewController: UIViewController {
         alphaLabel.text = textD
     }
     
+    func choicesPICSet() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        picSizeSegmented.setTitle("3:4", forSegmentAt: 0)
+        picSizeSegmented.setTitle("16:9", forSegmentAt: 1)
+        picSizeSegmented.setTitle("原圖", forSegmentAt: 2)
+        
+        imageView02.image = UIImage(named: "pic02.png")
+        
         displayLabelText(textA: "紅色", textB: "綠色", textC: "藍色", textD: "透明")
         colorLabelValueSet()
+        
+        randomButtonText.setTitle("隨機", for: .normal)
+        setButton.setTitle("拍張照", for:  .normal)
+        
     }
 
     @IBAction func changeColorSlider(_ sender: UISlider) {
@@ -79,11 +95,21 @@ class ViewController: UIViewController {
         colorSet()
     }
     
-    @IBAction func setButton(_ sender: Any) {
+    @IBAction func choiceSize(_ sender: UISegmentedControl) {
         
+        let width: CGFloat = 300
+        var height: CGFloat = 0
         
+        if sender.selectedSegmentIndex == 2 {
+            height = width
+        } else if sender.selectedSegmentIndex == 1 {
+            height = width / 16 * 9
+        } else {
+            height = width / 4 * 3
+        }
         
+        imageView02.frame.size = CGSize(width: width, height: height)
+        imageView01.frame.size = imageView02.frame.size
     }
     
 }
-

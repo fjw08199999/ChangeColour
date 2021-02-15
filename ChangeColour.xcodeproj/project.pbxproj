@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CECABB5525D8D935004CB374 /* FunctionPackge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECABB5425D8D935004CB374 /* FunctionPackge.swift */; };
 		CEFB838525D725A8005E1DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB838425D725A8005E1DCD /* AppDelegate.swift */; };
 		CEFB838725D725A8005E1DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB838625D725A8005E1DCD /* SceneDelegate.swift */; };
 		CEFB838925D725A8005E1DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB838825D725A8005E1DCD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CECABB5425D8D935004CB374 /* FunctionPackge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionPackge.swift; sourceTree = "<group>"; };
 		CEFB838125D725A8005E1DCD /* ChangeColour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeColour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFB838425D725A8005E1DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFB838625D725A8005E1DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		CEFB838325D725A8005E1DCD /* ChangeColour */ = {
 			isa = PBXGroup;
 			children = (
+				CECABB5425D8D935004CB374 /* FunctionPackge.swift */,
 				CEFB838425D725A8005E1DCD /* AppDelegate.swift */,
 				CEFB838625D725A8005E1DCD /* SceneDelegate.swift */,
 				CEFB838825D725A8005E1DCD /* ViewController.swift */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECABB5525D8D935004CB374 /* FunctionPackge.swift in Sources */,
 				CEFB838925D725A8005E1DCD /* ViewController.swift in Sources */,
 				CEFB838525D725A8005E1DCD /* AppDelegate.swift in Sources */,
 				CEFB838725D725A8005E1DCD /* SceneDelegate.swift in Sources */,

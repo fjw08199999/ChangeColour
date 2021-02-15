@@ -32,6 +32,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var picSizeSegmented: UISegmentedControl!
     
+    @IBOutlet weak var filterLabel: UILabel!
+    @IBOutlet weak var filterLabelValue: UILabel!
+    @IBOutlet weak var filterSliderValue: UISlider!
+    
+    
     func colorSet() {
         
         imageView01.backgroundColor = UIColor(red: CGFloat(redSliderValue.value), green: CGFloat(greenSliderValue.value), blue: CGFloat(blueSliderValue.value), alpha: CGFloat(alphaSliderValue.value))
@@ -80,6 +85,9 @@ class ViewController: UIViewController {
         randomButtonText.setTitle("隨機", for: .normal)
         setButton.setTitle("拍張照", for:  .normal)
         
+        filterLabel.text = "濾鏡"
+        filterLabelValue.text = String(format: "%.2f", filterSliderValue.value)
+        
     }
 
     @IBAction func changeColorSlider(_ sender: UISlider) {
@@ -112,4 +120,22 @@ class ViewController: UIViewController {
         imageView01.frame.size = imageView02.frame.size
     }
     
+    @IBAction func filterSlider(_ sender: UISlider) {
+        
+        let imageViewPIC = UIImage(named: "pic02.png")
+        let ciImage = CIImage(image: imageViewPIC!)
+        let filter = CIFilter.colorMonochrome()
+        
+        filter.inputImage = ciImage
+        filter.color = CIColor.black
+        filter.intensity = sender.value
+        
+        if let outputCIImage = filter.outputImage {
+        
+        let filterImage = UIImage(ciImage: outputCIImage)
+        
+        imageView02.image = filterImage
+        }
+    }
+
 }
